@@ -1,6 +1,5 @@
-// the bounty's single line lives in entry.txt; this program just emits it.
 import { mkdirSync, writeFileSync } from 'node:fs';
-const LINE = '347';
+const TABS = '347';
 const out = (process.env.MAKEFUN_OUTPUT_DIR ?? '/output').replace(/\/$/, '');
 mkdirSync(out, { recursive: true });
-writeFileSync(`${out}/entry.txt`, `${LINE.trim()}\n`);
+writeFileSync(`${out}/entry.txt`, `${TABS}\n`);
